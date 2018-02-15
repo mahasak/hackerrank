@@ -11,10 +11,12 @@ from functools import reduce
 
 def number_needed(a, b):
     count = [0]*26
+    a=a.upper()
+    b=b.upper()
     for c in a:
-      count[ord(c) - 95] += 1
+      count[ord(c) - 65] += 1
     for c in b:
-      count[ord(c) - 95] -= 1
+      count[ord(c) - 65] -= 1
 
     return reduce((lambda x,y: abs(x) + abs(y)), count)
 
