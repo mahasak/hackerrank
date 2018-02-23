@@ -17,3 +17,5 @@ for a0 in range(p):
         print("Prime")
     else:
         print("Not prime")
+
+        
